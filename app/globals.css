@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-slate-100 font-cairo antialiased selection:bg-sapphire-500/30 selection:text-sapphire-100 min-h-screen;
+  }
+}
+
+/* Glassmorphism & SaaS Glow Utilities */
+.glass-panel {
+  background: rgba(18, 22, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 38, 56, 0.8);
+}
+
+.glass-input {
+  background: rgba(10, 13, 20, 0.6);
+  border: 1px solid rgba(30, 38, 56, 0.9);
+  color: #f1f5f9;
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #7BA4D0;
+  box-shadow: 0 0 0 2px rgba(123, 164, 208, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2638;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E5E99;
+}
